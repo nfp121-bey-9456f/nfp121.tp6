@@ -40,7 +40,7 @@ public class Contributeur extends Cotisant{
     try{
       debit(solde()); credit(somme);// mode élégant ... 
     }catch(SoldeDebiteurException sde){ 
-      // exception peu probable
+      // exception peu probable 
       this.solde = somme; // mode efficace ...
     }
   }

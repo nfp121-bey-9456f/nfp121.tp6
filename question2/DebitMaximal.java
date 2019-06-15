@@ -1,5 +1,4 @@
 package question2;
-
 import question1.*;
 
 public class DebitMaximal implements Visiteur<Integer>{
@@ -13,8 +12,10 @@ public class DebitMaximal implements Visiteur<Integer>{
         int res = 0;
         for (Cotisant c : g) {
             int d = c.accepter(this);
-            if (d < res) res = d;
+            if (res ==0 || d < res ){
+                res=d; 
+            }
         }
-        return res ;
+            return res;
+        }    
     }
-}

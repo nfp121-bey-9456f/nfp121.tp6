@@ -26,13 +26,10 @@ public class GroupeDeContributeurs extends Cotisant implements Iterable<Cotisant
     Iterator<Cotisant> it = liste.iterator();
         while(it.hasNext()){                             
             Cotisant c = it.next(); 
-            if(c instanceof Contributeur){                             
-                nombre +=1; }
-            else{                             
-                nombre += c.nombreDeCotisants(); 
-            }
+            nombre += c.nombreDeCotisants(); 
+            
         }
-                return nombre;
+        return nombre;
   }
    
   public String toString(){
